@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static%}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Contact Us</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    <style>
+    #contactrectangle {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align : left;
+        border-radius: 20px;
+        background: #F5C643;
+        padding-left:25px;
+        padding-right: 25px;
+        padding-top: 10px;
+        padding-bottom: 25px;
+        width: 350px;
+        height: 150px;
+        font-size: 20px;
+        font-family: Alegreya Sans;
+    }
+
+    #extradiv {
+        margin-top: 2%;
+        margin-bottom: 3%;
+        font-size: 50px;
+        text-align:center;
+    }
+    </style>
+
+
+    <body>
+        <div class="col">
+            <a href="{%url 'home'%}" class="btn my-4" style = "background-color: #F5C643; margin-left: 10%; font-family: Alegreya Sans; font-size: 20px; border-radius: 50px;"> Back </a>
+        </div>
+
+
+        <div id = "extradiv">
+            <h3 style="font-size : 50px">CONTACT US</h3>
+        </div>
+
+            <nav id= "contactrectangle">
+                <p>Email  : myarchivesictm@gmail.com
+                </p>
+                <br>
+                <p>Facebook : ICTM Malaysia
+                </p>
+            </nav>
+        </nav>
+    </body>
+    
+</html>
+
+{% endblock content%}

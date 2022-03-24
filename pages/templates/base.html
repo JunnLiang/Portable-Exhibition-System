@@ -1,0 +1,76 @@
+<!--templates/base.html -->
+
+<!DOCTYPE html>
+{% load static%}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'pages/css/bootstrap.min.css' %}">
+
+    </head>
+    <style>
+    
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1%;
+    }
+
+    .header{
+        text-align:center; 
+        display: block;
+        margin-top:25px;
+        background-color:white;
+        height:25%;
+        width:100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left:3%;
+    }
+
+    .headerMargin{
+        text-decoration: none;
+        color:black;
+        font-size:20px;
+        font-family:"Abel";
+        margin-right:5%;
+    }
+
+    hr.style1{
+        
+	border-top: 3px solid #D99940;
+    
+    }
+    </style>
+
+    <header>
+        
+             <img src="{% static "pages/images/Logo.jpg" %}" alt="home" class ="center" />
+        
+    </header>
+
+    <body style = " overflow-x:hidden">
+
+        <nav class = "header">
+            <a class = "headerMargin" href="{% url 'home' %}">Home</a>
+            <a class = "headerMargin" href="{% url 'about' %}">About</a>
+            <a class = "headerMargin" href="{% url 'archivesHome' %}">AV Archives</a>
+            <a class = "headerMargin" href="{% url 'team' %}">Team</a>
+            <a class = "headerMargin" href="{% url 'contact' %}">Contact Us</a>
+        </nav>
+
+        <hr class = 'style1'>
+
+        <footer class="text-center text-white fixed-bottom">
+            <div class="text-center p-4" style="background-color:#D99940 ;">
+            </div>
+        </footer>
+    </body>
+{% block content%}
+{% endblock content%}
+
+</html>

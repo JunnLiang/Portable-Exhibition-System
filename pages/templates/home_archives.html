@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Archives</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style>
+        #extradiv {
+
+            margin-top: 2%;
+            margin-bottom: 3%;
+            font-size: 50px;
+            text-align:center;
+
+    }
+        #player {
+
+            width : 100%;
+
+    }
+
+        .image-thumbnail{
+            
+            height:250px;
+            width: 230px;
+            object-fit: cover;
+            border:0px;
+
+    }
+    </style>
+
+    <body> 
+            <div class="container">
+                <div class="row" >
+                    <div class="col-md-9" style="display:block; margin-left:auto; margin-right:auto;">
+                        <div id = "extradiv">
+                            <h3 style="font-size : 50px">Audio </h3>
+                        </div>
+                        <div class="row" > 
+                            {%for audio in media_audios %}
+                            {% with audio as archive_audio%}
+                                <div class="col-md-4">
+                                    <div class="card my-4 px-4" style="border:0px">
+                                        <audio controls class= "player">
+                                        <source src= "{% static archive_audio.media%}">
+                                        </audio>
+                                        <div class="card-body">
+                                            <a style="text-decoration:none; color:black" href="{% static archive_audio.media %}"><small> Title : {{archive_audio}} </small></a>
+                                        </div>
+                                </div>
+                       </div>
+                        {% endwith %}
+                        {% empty %}
+                            <h3> No Audio </h3>
+                        {% endfor %}
+
+
+
+                        <div id = "extradiv">
+                            <h3 style="font-size : 50px">Video </h3>
+                        </div>
+                        <div class="row">
+                            {%for video in media_videos %}
+                            {% with video as archive_video%}
+                                <div class="col-md-4">
+                                    <div class="card my-4" style="border:0px; padding-left:2%">
+                                    <video width="240" height="200" controls>
+                                    <source src="{%static "pages\Archive\2.Archive_videos\Video_3.mov" %}">
+                                    </video>
+                                        <div class="card-body">
+                                    <a style="text-decoration:none; color:black" href= "{% static archive_video.media %}"><small>Title : {{archive_video}} </small> </a>
+                                        </div>
+
+                                </div>
+                       </div>
+                        {% endwith %}
+                        {% empty %}
+                            <h3> No Video </h3>
+                        {% endfor %}
+                        </div>
+
+
+
+                        <div id = "extradiv">
+                            <h3 style="font-size : 50px">Photos </h3>
+                        </div>
+                        <div class="row"> <!-- this is to dynamically output the photos -->
+                            {%for photo in media_photos %}
+                            {% with photo as archive_photo%}
+                                <div class="col-md-4">
+                                    <div class="card my-2" style="border:0px;padding-left:3%">
+                                    <a class= "image-link"href= "{% static archive_photo.media %}"><img class="image-thumbnail" src="{% static archive_photo.media %}"></a>
+                                        <div class="card-body">
+                                            <small> Title : {{archive_photo}} </small>
+                                        </div>
+
+                                </div>
+                       </div>
+                        {% endwith %}
+                        {% empty %}
+                            <h3> No photo </h3>
+                        {% endfor %}
+                    </div>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <br>
+        <br>
+    </body>
+
+{% endblock content%}
+</html>

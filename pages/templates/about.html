@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+{% extends 'base.html' %}
+{% block content %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>About Us</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style>
+  
+
+    #aboutus {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom:2%;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    #mission{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 20px;
+        width: 50%;
+        text-align: center;
+    }
+    </style>
+                
+    <body>
+        <div class="col">
+            <a href="{%url 'home'%}" class="btn my-4" style = "background-color: #F5C643; margin-left: 10%; font-family: Alegreya Sans; font-size: 20px;border-radius: 50px;"> Back </a>
+        </div>
+       
+        <nav id= "aboutus">
+            <b>ABOUT US</b>
+        </nav>
+
+        <div id="mission">
+            <br>
+            <p style='text-align: center; font-size: 25px;'> <b>OUR MISSION</b></p> 
+
+            <div style="text-align: justify;">
+                MyArchives (Malaysian Audio-Visual Archives) is a project developed by the ICTM National Committee of Malaysia under the auspices of the International Council for Traditional Music. This project consists of a digital archive of performing arts developed through the joint efforts of scholars, performers and researchers focusing on traditions, past and present. The material is preserved in digital format for the purposes of research, sustainability and viability of the performing arts of the country. 
+            </div>
+
+            <br>
+            <br>
+            <p style='text-align: center; font-size: 25px;'> <b>Intellectual Property and Ethical Issues</b></p> 
+                
+            <div style="text-align: justify; margin-bottom:10%">
+                    In order to safeguard rights to privacy and intellectual/cultural property, access to materials deposited in the MyArchives Malaysian Audio-Visual Archives is restricted to educational use. No materials will be copied or reproduced without the written consent of the Depositor. The depositor warrants that he/she is the owner of all intellectual property rights, including copyrights, design rights, trademarks, and database rights. The depositor warrants that the material contains nothing obscene, libelous, blasphemous, in breach of copyright or otherwise unlawful, and indemnifies MyArchives against any loss or damage in consequence of any breach of this warranty. If the material has been published, the depositor is responsible for obtaining permission from the publisher and/or organization of the copyright material in the contribution. The depositor is responsible for the payment of all fees (if any) and shall deliver all correspondence and other documents relating to the permissions. No materials will be uploaded online.
+            </div>
+
+        </div>
+    </body>
+{% endblock content%}
+
+</html>
+
+

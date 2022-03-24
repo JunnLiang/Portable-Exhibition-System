@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Team</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<style>
+
+
+#teamnav {
+    margin-top: 3%;
+    margin-left:43%;
+    font-size: 50px;
+}
+
+.table1{
+    border:0px;
+    width:100px;
+    color:black;
+    padding-left:130px;
+    padding-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.hpicture{
+    height:200px;
+    width:auto;
+    alt:landscape;
+    padding:0cm;
+}
+
+</style>
+
+<body>
+    <div class="col">
+        <a href="{%url 'home'%}" class="btn my-4" style = "background-color: #F5C643; margin-left: 10%; font-family: Alegreya Sans; font-size: 20px;border-radius: 50px;"> Back </a>
+    </div>
+
+
+    <nav id = "teamnav">
+        <p> OUR TEAM </p>
+    </nav>
+
+    <table border = "0" align = "center">
+        <tr>
+            <td class= "table1">
+                <img class = "hpicture" src="{% static "pages/images/team1.1.JPG" %}" alt="team"/><p>Tan Sooi Beng</p>
+             </td>
+
+            <td class= "table1">
+                 <img class = "hpicture" src="{% static "pages/images/team2.1.JPG" %}" alt="team"/><p>Raja Iskandar</p>
+            </td>
+
+            <td class= "table1">
+                <img class = "hpicture" src="{% static "pages/images/team3.1.JPG" %}" alt="team" /><p>Mayco Santaella</p>
+            </td>
+            
+        </tr>
+
+        <tr>
+            <td class= "table1">
+                 <img class = "hpicture" src="{% static "pages/images/team4.JPG" %}" alt="team" /><p>Azeem Shah </p>
+            </td>
+
+            <td class= "table1">
+                 <img class = "hpicture" src="{% static "pages/images/team5.JPG" %}" alt="team" /><p>Patricia Matusky </p>
+            </td>
+
+            <td class= "table1">
+                 <img class = "hpicture"  src="{% static "pages/images/team6.JPG" %}" alt="team" /><p>Patricia Hardwick </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td class= "table1">
+                 <img class = "hpicture" src="{% static "pages/images/team7.JPG" %}" alt="team" /><p>Clare Suet Ching Chan </p>
+            </td>
+
+            <td class= "table1">
+                 <img class = "hpicture"  src="{% static "pages/images/team8.JPG" %}" alt="team" /><p>Rachel Ong Shu Ying </p>
+            </td>
+
+            <td class= "table1">
+                 <img class = "hpicture"  src="{% static "pages/images/team9.JPG" %}" alt="team" /><p>Connie Lim Keh Nie </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td class= "table1">
+                 <img class = "hpicture"  src="{% static "pages/images/team10.JPG" %}" alt="team" /><p>Christine Yun-May Yong </p>
+            </td>
+
+            <td class= "table1">
+                 <img class = "hpicture"  src="{% static "pages/images/team11.JPG" %}" alt="team" /><p>Hafzan Zannie Hamza </p>
+            </td>
+
+            <td class= "table1">
+                 <img class = "hpicture"  src="{% static "pages/images/team12.JPG" %}" alt="team" /><p>Mohd Anis Md Nor </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td class= "table1">
+                 <img class = "hpicture"  src="{% static "pages/images/team13.JPG" %}" alt="team" /><p>Jocelyn Ng </p>
+            </td>
+
+            <td class= "table1">
+                 <img class = "hpicture"  src="{% static "pages/images/team14.JPG" %}" alt="team" /><p>Adil Johan</p>
+            </td>
+
+            <td class= "table1">
+                 <img class = "hpicture"  src="{% static "pages/images/team15.JPG" %}" alt="team" /><p>Gini Gorlinski </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td class= "table1">
+                 <img class = "hpicture"  src="{% static "pages/images/team16.JPG" %}" alt="team" /><p>Toh Lai Chee </p>
+            </td>
+
+            <td class= "table1">
+                 <img class = "hpicture"  src="{% static "pages/images/team17.JPG" %}" alt="team" /><p>Margaret Sarkissian </p>
+            </td>
+        </tr>    
+    </table>
+</body>
+{% endblock content%}
+
+</html>

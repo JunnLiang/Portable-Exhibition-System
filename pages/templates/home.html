@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+{% extends 'base.html' %}
+{% block content %}
+{% load static%}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <style>
+    
+    #rectangle1 {
+        text-align : center;
+        margin-right : 50%;
+        border-radius: 50px;
+        background: #F5C643;
+        padding-left:25px;
+        padding-right: 25px;
+        padding-top: 10px;
+        padding-bottom: 25px;
+        width: 200px;
+        height: 100px;
+        font-size: 25px;
+        font-family: Alegreya Sans;
+        
+    }
+
+    .navbar1 {
+        position : absolute; 
+        left : 43%;
+        top: 48%;
+        width: 900px; }
+
+    </style>
+
+    <body>
+    <nav class = "navbar1">
+        <nav id = "rectangle1">
+        <b><a href= "{% url 'archivesHome' %}" style = "text-decoration: none; color:black;"> View Collection</a></b>
+        </nav>
+        
+    </nav>
+    </body>
+
+    {% endblock content%}
+
+</html>
