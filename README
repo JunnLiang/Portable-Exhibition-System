@@ -1,0 +1,7 @@
+--After importing the file--
+
+--Initiate pipenv environment--
+
+--Download django framework package in the environment--
+
+--type command "python -manage runserver"--
